@@ -1,17 +1,15 @@
-import './App.css';
-import Title from './components/Title/Title';
-import LoginForm from './components/LoginForm/LoginForm';
-import LinkCadastro from './components/Cadastro/Cadastro';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TelaLogin from './pages/TelaLogin'
+import TelaRegister from './pages/TelaRegister'; 
 
 function App() {
   return (
-    <div>
-      <Title />
-      <LoginForm />
-      <LinkCadastro />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TelaLogin />} />
+        <Route path="/cadastro" element={<TelaRegister />} />
+      </Routes>
+    </Router>
   );
 }
 

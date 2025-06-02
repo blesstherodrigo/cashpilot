@@ -1,0 +1,7 @@
+.rodape {
+  height: 4.5rem;
+  background-color: hwb(125 51% 11%);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

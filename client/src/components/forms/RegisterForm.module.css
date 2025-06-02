@@ -1,0 +1,121 @@
+.section{
+    height: 500px;
+    width: 900px;
+    background-color: hwb(125 51% 11%);
+    justify-self: center;
+    display: flex ;
+    gap:1rem;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+
+.btVoltar{
+    margin-top: 35px;
+    margin-left: 35px;
+    height: 48px;
+    width: 65px;
+    border-radius: 11px;
+    border: none;
+    background-color:  hwb(221 29% 1%);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.Nome{
+    margin-top: 1px;
+    height: 53px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 21px;
+    border:solid #acacac 1px;
+}
+
+.Email{
+    margin-top: 1px;
+    margin-left: 35px;
+    height: 53px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 21px;
+    border:solid #acacac 1px;
+}
+
+.Senha{
+    height: 53px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 21px;
+    border:solid #acacac 1px;
+}
+
+.DtNascimento{
+    margin-left: 35px;
+    height: 54px;
+    width: 354px;
+    border-radius: 10px;
+    font-size: 21px;
+    border:solid #acacac 1px;
+}
+
+.CPF{
+    height: 53px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 21px;
+    border:solid #acacac 1px;
+}
+
+.btCadastrar{
+    margin-bottom: 30px;
+    height: 50px;
+    width: 210px;
+    border-radius: 10px;
+    border: none;
+    font-size: 23px;
+    background-color: hwb(221 29% 1%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+body{
+    text-align: center;
+    margin: 0;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 25px;
+    margin: 40px 35px 20px 35px;
+}
+
+.linhaFinal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 35px;
+    margin-top: auto;
+}
+
+.caixaCheckbox{
+    margin-bottom: 30px;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    width: 160px;
+    background-color: hsl(0, 0%, 70%);
+    border:solid black 1px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.checkbox{
+    font-size: 20px;
+}
