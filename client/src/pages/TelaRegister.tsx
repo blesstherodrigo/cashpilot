@@ -6,7 +6,7 @@ export default function TelaRegister() {
   return (
     <div>
       <TitleRegister />
-      <Footer />
+      
       <RegisterForm />
     </div>
   );
