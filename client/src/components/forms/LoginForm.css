@@ -42,4 +42,40 @@
   text-align: center;
   display: block;
   margin-top: 10px;
+  text-decoration: none;
+}
+
+
+@media(max-width:640px){
+
+  .section{
+    margin-right: 2rem;
+    margin-left: 2rem;
+    height: 15rem;
+    width: 23rem;
+  }
+  .Email{
+    height: 2.5rem;
+    margin-top: 20px;
+    width: 14rem;
+    border-radius: 6px;
+  }
+  .Senha{
+    height: 2.5rem;
+    margin-top: 1px;
+    width: 14rem;
+    border-radius: 6px;
+  }
+
+  .entrar{
+    margin-top: 10px;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+
+  .title{
+    font-size: 60px;
+  }
 }
