@@ -1,0 +1,20 @@
+{
+    "usuarios": [{
+        "id": "",
+        "nome": "",
+        "email": "",
+        "senha": "",
+        "cpf": "",
+        "nascimento": "",
+        "gastos": [
+            {
+                "id": "",
+                "nome": "",
+                "tipo": "",
+                "valor": "",
+                "data": "",
+                "descricao": ""
+            }
+        ]
+    }]
+}
