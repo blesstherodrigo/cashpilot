@@ -18,7 +18,7 @@ server.get('/', (req, res) => {
 })
 
 server.listen(PORT, () => {
-    console.log('Server rodando na ports: ' + PORT);
+    console.log('Server rodando na porta: ' + PORT);
 })
 
 export { server, PORT }
