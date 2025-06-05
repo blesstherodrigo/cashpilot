@@ -82,6 +82,96 @@
     margin-right: 6px;
 }
 
+@media(max-width:950px){
+    .section{
+        height: 25rem;
+        width: 45rem;
+    }
+
+    div .formulario{
+        margin-top: 10px
+    }
+
+    .Nome, .Email, .Senha, .DtNascimento, .CPF{
+        height: 2.6rem;
+        width: 17rem;
+        font-size: 18px;
+    }
+
+    button .btVoltar, .btCadastrar{
+        height: 2.6rem;
+    }
+
+    .caixaCheckbox{
+        height: 2.6rem;
+    }
+
+    .btCadastrar{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:760px){
+    .section{
+        height: 37rem;
+        width: 30rem;
+    }
+    
+    .formulario {
+    display: grid !important;
+    grid-template-columns: 1fr !important;  /* Apenas uma coluna */
+    row-gap: 20px; /* Espaçamento entre os inputs */
+    column-gap: 0; /* Sem espaçamento lateral entre colunas */
+    margin: 20px 20px;
+    }
+
+    .btVoltar{
+        height: 2rem;
+        font-size: 18px;
+    }
+
+    .Nome{
+        margin-top: 61px;
+    }
+
+    .Nome, .Email, .Senha, .DtNascimento, .CPF {
+    width: 100% !important; /* Ocupa toda a largura da coluna */
+    margin-left: 0;
+    font-size: 16px;
+    }
+
+    .linhaFinal {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    }
+
+    .checkbox{
+        font-size: 10px !important;
+    }
+}
+
+@media(max-width:545px){
+    .section{
+        width: 22rem;
+    }
+
+    .Nome{
+        margin-top: 3px;
+    }
+
+    .caixaCheckbox{
+        height: 2rem !important;
+        font-size: 16px !important;
+    }
+
+    .btCadastrar{
+        height: 2.4rem !important; 
+        width: 10rem;
+        font-size: 17px !important;
+    }
+}
+
 body{
     text-align: center;
     margin: 0;
@@ -118,4 +208,5 @@ body{
 
 .checkbox{
     font-size: 20px;
+    cursor: pointer;
 }

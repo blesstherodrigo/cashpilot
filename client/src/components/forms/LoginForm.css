@@ -59,12 +59,14 @@
     margin-top: 20px;
     width: 14rem;
     border-radius: 6px;
+    font-size: 18px;
   }
   .Senha{
     height: 2.5rem;
     margin-top: 1px;
     width: 14rem;
     border-radius: 6px;
+    font-size: 18px;
   }
 
   .entrar{
