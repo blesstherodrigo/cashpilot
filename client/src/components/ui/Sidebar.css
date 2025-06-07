@@ -1,0 +1,24 @@
+.menu-lateral {
+  width: 60px;
+  height: 100%;
+  background-color: rgb(180, 180, 180);
+  padding-left: 0; 
+}
+
+ul {
+  height: 100%;
+  list-style-type: none;
+  padding-left: 0; 
+  margin: 0;
+}
+
+.item-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  display: flex;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  justify-content: flex-start; 
+  padding-left: 15px; 
+}

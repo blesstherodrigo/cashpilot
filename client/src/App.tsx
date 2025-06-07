@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TelaLogin from './pages/TelaLogin'
 import TelaRegister from './pages/TelaRegister'; 
-import Footer from './components/layout/Footer';
+import TelaInicio from './pages/TelaInicio';
 
 function App() {
   return (
@@ -9,10 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<TelaLogin />} />
         <Route path="/cadastro" element={<TelaRegister />} />
+        <Route path="/inicio" element={<TelaInicio />} />
       </Routes>
-
-      {/* Footer fixo em todas as páginas */}
-      <Footer />
     </Router>
   );
 }

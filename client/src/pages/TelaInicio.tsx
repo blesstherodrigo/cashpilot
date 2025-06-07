@@ -1,0 +1,7 @@
+import MainLayout from '../components/layout/MainLayout';
+
+export default function TelaInicio() {
+  return (
+    <MainLayout> </MainLayout>
+  );
+}
