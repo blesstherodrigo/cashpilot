@@ -1,9 +1,13 @@
 import styles from './Header.module.css';
 
-export default function Header() {
+interface HeaderProps {
+  titulo: string;
+}
+
+export default function Header({ titulo }: HeaderProps) {
   return (
     <header className={styles.header}>
-      <h1>INÍCIO</h1>
+      <h1>{titulo}</h1>
     </header>
   );
 }

@@ -3,7 +3,7 @@ import BalanceCard from '../components/ui/BalanceCard';
 
 export default function TelaInicio() {
   return (
-    <MainLayout> 
+    <MainLayout titulo="INÍCIO"> 
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '20px' , justifySelf:'center'}}>
         <BalanceCard />
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: '20px' }}>
