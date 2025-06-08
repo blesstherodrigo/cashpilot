@@ -1,11 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './RegisterForm.module.css';
 
 export default function Cadastro() {
+
+  const navigate = useNavigate ();
+
   return (
     <>
       <section className={styles.section}>
 
-        <button className={styles.btVoltar}>Voltar</button>
+        <button className={styles.btVoltar} onClick={() => navigate('/')}>Voltar</button>
 
         <div className={styles.formulario}>
           <input type="text" className={styles.Nome} placeholder="Digite seu nome..." />

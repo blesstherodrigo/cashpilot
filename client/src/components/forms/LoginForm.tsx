@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
 export default function LoginForm() {
+
+  const navigate = useNavigate();
+
     return (
       <>
         <section className="section">
@@ -8,9 +12,9 @@ export default function LoginForm() {
       <br />
       <input type="password" className="Senha" placeholder="Senha" />
       <br />
-      <button className="entrar">Entrar</button>
+      <button className="entrar"  onClick={() => navigate('/inicio')}>Entrar</button>
     </section>
-      <a href="" className="linkregister">Criar Conta</a>
+      <a href="/cadastro" className="linkregister">Criar Conta</a>
       </>
     );
 }
