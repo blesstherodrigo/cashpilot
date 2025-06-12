@@ -59,7 +59,7 @@ return (
         ADD GASTO
       </button>
 
-      {/* ✅ Modal de adicionar/editar gastos */}
+      {/* Modal de adicionar/editar gastos */}
       <ModalGastos
         isOpen={openModal}
         setModalOpen={() => setOpenModal(false)}
@@ -68,7 +68,7 @@ return (
         isEditando={!!gastoEditando} //////
       />
 
-      {/* ✅ Novo modal de confirmação de exclusão */}
+      {/* Novo modal de confirmação de exclusão */}
       <ModalConfirmacao
         isOpen={modalConfirmacaoAberto}
         onCancelar={() => {
@@ -82,7 +82,7 @@ return (
         }}
       />
 
-      {/* ✅ Lista de gastos */}
+      {/* Lista de gastos */}
       <div className="gastosContainer">
         {gastos.map(gasto => (
           <div
