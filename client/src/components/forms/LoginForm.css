@@ -25,6 +25,15 @@
   margin-top: 20px;
 }
 
+.EsconderSenha{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  color: rgb(0, 0, 0);
+  margin-left: -34px;
+}
+
 .entrar {
   margin-top: 30px;
   height: 50px;
@@ -38,11 +47,16 @@
   cursor: pointer;
 }
 
+.txtCad{
+  text-align: center;
+  align-items: flex-end;
+  
+}
+
 .linkregister {
   text-align: center;
   display: block;
   margin-top: 10px;
-  text-decoration: none;
 }
 
 

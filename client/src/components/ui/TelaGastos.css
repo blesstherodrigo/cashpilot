@@ -18,6 +18,22 @@
     background-color: hsl(0, 0%, 100%);
 }
 
+.modalExcluirGasto{
+    height: 26rem;
+    width: 50vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.txtExc{
+    margin-top: 40px;
+    font-size: 19px;
+}
+
+
 .headerModAddGasto{
     height: 60px;
     width: 100%;
@@ -81,7 +97,6 @@
     font-size: 23px;
     border-radius: 10px;
 }
-
 .background{
     position: fixed;
     top: 0;
@@ -162,7 +177,7 @@
 }
 
 .BtAdicionar{
-    margin-left: 5rem;
+    margin-left: 1rem;
     font-size: 17px;
     width: 5rem;
 }
@@ -171,11 +186,48 @@
     font-size: 17px;
     width: 5rem;
     margin-left: 0;
+    margin-right: 1rem;
 }
 
 .headerModAddGasto{
     font-size: 32px;
 }
 
+.modalExcluirGasto{
+    height: 24rem;
+    width: 70vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
 }
+
+}
+
+
+
+.gastosContainer {
+  margin-top: 20px;
+}
+
+.gastoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gastoButtons button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
 

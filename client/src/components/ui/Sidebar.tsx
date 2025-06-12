@@ -15,7 +15,10 @@ export default function Sidebar() {
           <a href="/gastos"><i className="bi bi-currency-dollar"></i></a>
         </li>
         <li className="item-menu">
-          <a href="#"><i className="bi bi-chat-dots"></i></a>
+          <a href="/suporte "><i className="bi bi-chat-dots"></i></a>
+        </li>
+        <li className="item-menu">
+          <a href="/"><i className="bi bi-box-arrow-left"></i></a>
         </li>
       </ul>
     </nav>

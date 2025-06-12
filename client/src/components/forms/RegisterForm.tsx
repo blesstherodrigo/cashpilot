@@ -14,7 +14,7 @@ export default function Cadastro() {
         <div className={styles.formulario}>
           <input type="text" className={styles.Nome} placeholder="Digite seu nome..." />
           <input type="text" className={styles.Email} placeholder="exemplo@email.com" />
-          <input type="password" className={styles.Senha} placeholder="Digite sua senha" />
+          <input type="text" className={styles.Senha} placeholder="Digite sua senha" />
           <input type="date" className={styles.DtNascimento} />
           <input type="text" className={styles.CPF} placeholder="Digite seu CPF..." />
         </div>
