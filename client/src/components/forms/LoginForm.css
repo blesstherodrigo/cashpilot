@@ -7,7 +7,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-}
+} 
 
 .Email, .Senha {
   height: 50px;
