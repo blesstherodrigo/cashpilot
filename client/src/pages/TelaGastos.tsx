@@ -1,118 +1,82 @@
-import Title from '../components/ui/TitlePilot';
-import MainLayout from '../components/layout/MainLayout';
-import '../components/ui/TelaGastos.css';
-import ModalGastos from '../components/ui/ModalAddGastos';
-import { useState } from 'react';
-import ModalConfirmacao from '../components/ui/ModalConfirmação';
 
-type Gasto = {
-  id: number;
-  nome: string;
+import MainLayout from '../components/layout/MainLayout'; // aparecer header e sidebar
+import '../components/ui/TelaGastos.css';
+import { useEffect, useState } from 'react';
+import api from '../services/Api'
+import GastoItem from '../components/ui/GastoItem'
+import ModalGasto from '../components/ui/ModalGasto'
+
+export interface Gasto {
+  id: string;
+  titulo: string;
   tipo: string;
-  preco: number;
   data: string;
-  descricao: string;
-};
+  valor: number;
+  descricao?: string;
+}
 
 export default function TelaGastos() {
-  const [openModal, setOpenModal] = useState(false);
   const [gastos, setGastos] = useState<Gasto[]>([]);
+  const [modalAberto, setModalAberto] = useState(false);
   const [gastoEditando, setGastoEditando] = useState<Gasto | null>(null);
 
-  const [modalConfirmacaoAberto, setModalConfirmacaoAberto] = useState(false);/////
-  const [idParaExcluir, setIdParaExcluir] = useState<number | null>(null);////
-
-
-  const adicionarOuEditarGasto = (gasto: Gasto) => {
-    if (gastoEditando) {
-      // Editando
-      setGastos(prev =>
-        prev.map(g => (g.id === gasto.id ? gasto : g))
-      );
-    } else {
-      // Adicionando
-      setGastos(prev => [...prev, { ...gasto, id: Date.now() }]);
+  const carregarGastos = async () => {
+    try {
+      const res = await api.get('/gastos');
+      setGastos(res.data.gastos);
+    } catch (err) {
+      console.error('Erro ao carregar gastos', err);
     }
+  };
+
+  const abrirModalNovo = () => {
     setGastoEditando(null);
-    setOpenModal(false);
+    setModalAberto(true);
   };
 
-  const excluirGasto = (id: number) => {
-    setGastos(prev => prev.filter(g => g.id !== id));
-  };
-
-  const editarGasto = (gasto: Gasto) => {
+  const abrirModalEditar = (gasto: Gasto) => {
     setGastoEditando(gasto);
-    setOpenModal(true);
+    setModalAberto(true);
   };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+    setGastoEditando(null);
+    carregarGastos(); // atualiza lista após edição
+  };
+
+  useEffect(() => {
+    carregarGastos();
+  }, []);
 
 return (
   <MainLayout titulo="GASTOS">
     <>
-      <button
-        className='AddGasto'
-        onClick={() => {
-          setOpenModal(true);
-          setGastoEditando(null);
-        }}
-      >
-        ADD GASTO
-      </button>
+      <div style={{ padding: '2rem' }}>
+      <h1>Meus Gastos</h1>
+      <button onClick={abrirModalNovo}>+ Adicionar Gasto</button>
 
-      {/* Modal de adicionar/editar gastos */}
-      <ModalGastos
-        isOpen={openModal}
-        setModalOpen={() => setOpenModal(false)}
-        onSubmit={adicionarOuEditarGasto}
-        gastoEditando={gastoEditando}
-        isEditando={!!gastoEditando} //////
-      />
-
-      {/* Novo modal de confirmação de exclusão */}
-      <ModalConfirmacao
-        isOpen={modalConfirmacaoAberto}
-        onCancelar={() => {
-          setModalConfirmacaoAberto(false);
-          setIdParaExcluir(null);
-        }}
-        onConfirmar={() => {
-          if (idParaExcluir !== null) excluirGasto(idParaExcluir);
-          setModalConfirmacaoAberto(false);
-          setIdParaExcluir(null);
-        }}
-      />
-
-      {/* Lista de gastos */}
-      <div className="gastosContainer">
-        {gastos.map(gasto => (
-          <div
+      {gastos.length === 0 ? (
+        <p>Nenhum gasto encontrado.</p>
+      ) : (
+        gastos.map((gasto) => (
+          <GastoItem
             key={gasto.id}
-            className="gastoItem"
-            style={{ backgroundColor: getCorPorTipo(gasto.tipo) }}
-          >
-            <strong>{gasto.tipo}:</strong> - R$ {gasto.preco}
-            <span>Data: {gasto.data}</span>
-            <div className="gastoButtons">
-              <button onClick={() => editarGasto(gasto)}>✏️</button>
-              <button onClick={() => {
-                setIdParaExcluir(gasto.id);
-                setModalConfirmacaoAberto(true);
-              }}>🗑️</button>
-            </div>
-          </div>
-        ))}
-      </div>
+            gasto={gasto}
+            onEditar={abrirModalEditar}
+            onDeletar={carregarGastos}
+          />
+        ))
+      )}
+
+      {modalAberto && (
+        <ModalGasto
+          gasto={gastoEditando}
+          onClose={fecharModal}
+        />
+      )}
+    </div>
     </>
   </MainLayout>
 );
-
-}
-
-function getCorPorTipo(tipo: string) {
-  switch (tipo.toLowerCase()) {
-    case 'moradia': return '#f6d4f7';
-    case 'transporte': return '#fef2cf';
-    case 'alimentação': return '#d3f0ff';
-    default: return '#f0f0f0';
-  }
 }
