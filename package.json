@@ -1,0 +1,8 @@
+{
+  "name": "cashpilot-root",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm start"
+  }
+}

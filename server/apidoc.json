@@ -1,0 +1,219 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "CashPilot: Controle de Gastos",
+    "description": "API para gerenciamento de usuários, autenticação e controle de gastos pessoais."
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/login": {
+      "post": {
+        "summary": "Login do usuário",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "credenciais",
+            "schema": {
+              "type": "object",
+              "required": ["email", "senha"],
+              "properties": {
+                "email": { "type": "string" },
+                "senha": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": { "description": "Login bem-sucedido com token" },
+          "401": { "description": "Credenciais inválidas" }
+        }
+      }
+    },
+    "/cadastro": {
+      "post": {
+        "summary": "Cadastro de novo usuário",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "usuario",
+            "schema": {
+              "type": "object",
+              "required": ["nome", "nascimento", "email", "senha"],
+              "properties": {
+                "nome": { "type": "string" },
+                "nascimento": { "type": "string" },
+                "email": { "type": "string" },
+                "senha": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": { "description": "Usuário cadastrado com sucesso" },
+          "409": { "description": "Email já está em uso" }
+        }
+      }
+    },
+    "/perfil": {
+      "get": {
+        "summary": "Retorna perfil do usuário",
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": { "description": "Perfil retornado com sucesso" },
+          "404": { "description": "Usuário não encontrado" }
+        }
+      },
+      "put": {
+        "summary": "Atualiza perfil do usuário",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "dados",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": { "type": "string" },
+                "email": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Perfil atualizado com sucesso" }
+        }
+      }
+    },
+    "/gastos": {
+      "get": {
+        "summary": "Lista todos os gastos do usuário",
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": { "description": "Gastos listados com sucesso" }
+        }
+      },
+      "post": {
+        "summary": "Adiciona novo gasto",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "gasto",
+            "schema": {
+              "type": "object",
+              "required": ["titulo", "tipo", "data", "valor"],
+              "properties": {
+                "titulo": { "type": "string" },
+                "tipo": { "type": "string" },
+                "data": { "type": "string" },
+                "valor": { "type": "number" },
+                "descricao": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": { "description": "Gasto adicionado com sucesso" }
+        }
+      }
+    },
+    "/gastos/{id}": {
+      "put": {
+        "summary": "Atualiza gasto existente",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "gasto",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "titulo": { "type": "string" },
+                "tipo": { "type": "string" },
+                "data": { "type": "string" },
+                "valor": { "type": "number" },
+                "descricao": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": { "description": "Gasto atualizado com sucesso" },
+          "404": { "description": "Gasto não encontrado" }
+        }
+      },
+      "delete": {
+        "summary": "Remove um gasto",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": { "description": "Gasto deletado com sucesso" },
+          "404": { "description": "Gasto não encontrado" }
+        }
+      }
+    },
+    "/gastos/por-tipo": {
+      "get": {
+        "summary": "Gastos agrupados por tipo",
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": { "description": "Gastos por tipo retornados com sucesso" }
+        }
+      }
+    },
+    "/gastos/por-mes": {
+      "get": {
+        "summary": "Gastos agrupados por mês",
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": { "description": "Gastos por mês retornados com sucesso" }
+        }
+      }
+    },
+    "/perguntar": {
+      "post": {
+        "summary": "Pergunta para o assistente OpenAI",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "pergunta",
+            "schema": {
+              "type": "object",
+              "required": ["pergunta"],
+              "properties": {
+                "pergunta": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Resposta gerada com sucesso" }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "Use o formato: Bearer {token}"
+    }
+  }
+}

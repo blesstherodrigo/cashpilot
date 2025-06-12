@@ -1,0 +1,58 @@
+{
+  "usuarios": {
+    "j_BD2tEzXVBseO4Vb0krj": {
+      "id": "j_BD2tEzXVBseO4Vb0krj",
+      "nome": "Maria Lurdes Souza",
+      "nascimento": "1990-02-07",
+      "email": "maria.lurdes@email.com",
+      "senha": "$2b$10$/6i57Xlv4oZHIyoTPdjYx./UBcM848fyq1Fv25Z1OkJCZPSlHmmVm"
+    }
+  },
+  "gastos": {
+    "c02mEtuHvSOle9IfqLg4W": {
+      "id": "c02mEtuHvSOle9IfqLg4W",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Conta de Luz",
+      "tipo": "Moradia",
+      "data": "2025-01-15",
+      "valor": 133.33,
+      "descricao": "conta de luz paga com sucesso"
+    },
+    "MQ0OvKNq6uXpnWHSMyzbZ": {
+      "id": "MQ0OvKNq6uXpnWHSMyzbZ",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Bilhete",
+      "tipo": "Transporte",
+      "data": "2025-03-11",
+      "valor": 50,
+      "descricao": "carreguei bilhete único"
+    },
+    "8pliQWzovju6FBDGvovL8": {
+      "id": "8pliQWzovju6FBDGvovL8",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Almoço",
+      "tipo": "Alimentação",
+      "data": "2025-03-09",
+      "valor": 50.55,
+      "descricao": "conta do restaurante, com os amigos"
+    },
+    "DR5Cjinft9pqAGLFJ-Dua": {
+      "id": "DR5Cjinft9pqAGLFJ-Dua",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Janta",
+      "tipo": "Alimentação",
+      "data": "2025-08-19",
+      "valor": 99.99,
+      "descricao": "janta de hoje a noite"
+    },
+    "0X1xZUTAZC6wUhL8RdjMR": {
+      "id": "0X1xZUTAZC6wUhL8RdjMR",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Tenis",
+      "tipo": "Outros",
+      "data": "2025-08-27",
+      "valor": 350.55,
+      "descricao": "tenis de presente para o meu pai"
+    }
+  }
+}
