@@ -1,4 +1,5 @@
 // src/components/ui/GastoItem.tsx
+
 import { Gasto } from '../../pages/TelaGastos/TelaGastos';
 import api from '../../services/Api';
 
