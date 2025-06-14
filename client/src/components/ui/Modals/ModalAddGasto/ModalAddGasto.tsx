@@ -1,4 +1,6 @@
-// src/components/ui/ModalAddGasto.tsx
+// src/components/ui/ModalAddGasto/ModalAddGasto.tsx
+
+import './ModalAddGasto.css'; 
 import { useState } from 'react';
 import api from '../../../../services/Api';
 

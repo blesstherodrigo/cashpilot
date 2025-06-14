@@ -1,0 +1,79 @@
+.modalExcluirGasto {
+  height: 26rem;
+  width: 50vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.headerModAddGasto {
+  height: 60px;
+  width: 100%;
+  background-color: #5cdd5c;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.txtExc {
+  margin-top: 40px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.BtCancelar {
+  height: 3.9rem;
+  width: 10rem;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 90px;
+  font-size: 23px;
+  border-radius: 10px;
+}
+
+.BtAdicionar {
+  height: 3.9rem;
+  width: 10rem;
+  background-color: hsl(224, 100%, 51%);
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 90px;
+  margin-left: 28rem;
+  font-size: 23px;
+  border-radius: 10px;
+}
+
+.background {
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+@media (max-width: 860px) {
+  .modalExcluirGasto {
+    width: 70vw;
+    height: 24rem;
+  }
+
+  .BtAdicionar, .BtCancelar {
+    width: 5rem;
+    font-size: 17px;
+    margin-left: 1rem;
+  }
+
+  .txtExc {
+    font-size: 17px;
+  }
+
+  .headerModAddGasto {
+    font-size: 32px;
+  }
+}

@@ -1,4 +1,6 @@
-// src/components/ui/ModalEditGasto.tsx
+// src/components/ui/ModalEditGasto/ModalEditGasto.tsx
+
+import './ModalEditGasto.css';
 import { useState } from 'react';
 import api from '../../../../services/Api';
 import { Gasto } from '../../../../pages/TelaGastos/TelaGastos';

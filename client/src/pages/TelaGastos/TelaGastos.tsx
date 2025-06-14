@@ -1,12 +1,13 @@
 // src/pages/TelaGastos/TelaGastos.tsx
 
-import MainLayout from '../../components/layout/MainLayout';
-import './TelaGastos.css';
 import { useEffect, useState } from 'react';
+import MainLayout from '../../components/layout/MainLayout';
 import api from '../../services/Api';
 import GastoItem from '../../components/ui/GastoItem';
 import ModalAddGasto from '../../components/ui/Modals/ModalAddGasto/ModalAddGasto';
 import ModalEditGasto from '../../components/ui/Modals/ModalEditGasto/ModalEditGasto';
+import ModalDeleteGasto from '../../components/ui/Modals/ModalDeleteGasto/ModalDeleteGasto';
+import './TelaGastos.css';
 
 export interface Gasto {
   id: string;
@@ -17,10 +18,12 @@ export interface Gasto {
   descricao?: string;
 }
 
+
 export default function TelaGastos() {
   const [gastos, setGastos] = useState<Gasto[]>([]);
   const [modalAberto, setModalAberto] = useState(false);
   const [gastoEditando, setGastoEditando] = useState<Gasto | null>(null);
+  const [gastoDeletando, setGastoDeletando] = useState<Gasto | null>(null);
 
   const carregarGastos = async () => {
     try {
@@ -44,7 +47,27 @@ export default function TelaGastos() {
   const fecharModal = () => {
     setModalAberto(false);
     setGastoEditando(null);
-    carregarGastos(); // Atualiza lista após salvar
+    carregarGastos();
+  };
+
+  const abrirModalExcluir = (gasto: Gasto) => {
+    setGastoDeletando(gasto);
+  };
+
+  const cancelarExclusao = () => {
+    setGastoDeletando(null);
+  };
+
+  const confirmarExclusao = async () => {
+    try {
+      if (gastoDeletando) {
+        await api.delete(`/gastos/${gastoDeletando.id}`);
+        setGastoDeletando(null);
+        carregarGastos();
+      }
+    } catch (err) {
+      alert('Erro ao excluir gasto.');
+    }
   };
 
   useEffect(() => {
@@ -53,7 +76,7 @@ export default function TelaGastos() {
 
   return (
     <MainLayout titulo="GASTOS">
-      <div style={{ marginLeft: '55px', padding: '2rem' }}>
+      <div className='sectiongastos'>
         <h1>Meus Gastos</h1>
         <button onClick={abrirModalNovo}>+ Adicionar Gasto</button>
 
@@ -65,19 +88,25 @@ export default function TelaGastos() {
               key={gasto.id}
               gasto={gasto}
               onEditar={abrirModalEditar}
-              onDeletar={carregarGastos}
+              onExcluir={abrirModalExcluir} // ← novo
             />
           ))
         )}
 
-        {/* Modal de Adicionar */}
         {modalAberto && !gastoEditando && (
           <ModalAddGasto onClose={fecharModal} />
         )}
 
-        {/* Modal de Edidat */}
         {modalAberto && gastoEditando && (
           <ModalEditGasto gasto={gastoEditando} onClose={fecharModal} />
+        )}
+
+        {gastoDeletando && (
+          <ModalDeleteGasto
+            isOpen={true}
+            onCancelar={cancelarExclusao}
+            onConfirmar={confirmarExclusao}
+          />
         )}
       </div>
     </MainLayout>

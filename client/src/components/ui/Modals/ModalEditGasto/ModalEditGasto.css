@@ -1,0 +1,127 @@
+.modalAddGastos {
+  height: 39rem;
+  width: 50vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.headerModAddGasto {
+  height: 60px;
+  width: 100%;
+  background-color: #5cdd5c;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 25px;
+  margin: 40px 35px 20px 35px;
+}
+
+.Nome, .Tipo, .Preco, .Data {
+  height: 55px;
+  width: 18vw;
+  border-radius: 10px;
+  font-size: 21px;
+  border: solid #acacac 1px;
+  background-color: hwb(0 91% 9%);
+}
+
+.Descricao {
+  height: 150px;
+  width: 42.5vw;
+  border-radius: 10px;
+  font-size: 21px;
+  border: solid #acacac 1px;
+  background-color: hwb(0 91% 9%);
+}
+
+.BtCancelar {
+  height: 3.9rem;
+  width: 10rem;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 90px;
+  font-size: 23px;
+  border-radius: 10px;
+}
+
+.BtAdicionar {
+  height: 3.9rem;
+  width: 10rem;
+  background-color: hsl(224, 100%, 51%);
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 90px;
+  margin-left: 28rem;
+  font-size: 23px;
+  border-radius: 10px;
+}
+
+.background {
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+@media (max-width: 1100px) {
+  .modalAddGastos {
+    height: 45rem;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .Nome, .Tipo, .Preco, .Data {
+    width: 38vw;
+    font-size: 19px;
+  }
+
+  .Descricao {
+    width: 38vw;
+  }
+
+  .BtAdicionar {
+    margin-left: 10rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .modalAddGastos {
+    width: 20rem;
+  }
+
+  .Nome, .Tipo, .Preco, .Data {
+    width: 15rem;
+    font-size: 17px;
+  }
+
+  .Descricao {
+    width: 15rem;
+    font-size: 17px;
+  }
+
+  .BtAdicionar, .BtCancelar {
+    width: 5rem;
+    font-size: 17px;
+    margin-left: 1rem;
+  }
+
+  .headerModAddGasto {
+    font-size: 32px;
+  }
+}

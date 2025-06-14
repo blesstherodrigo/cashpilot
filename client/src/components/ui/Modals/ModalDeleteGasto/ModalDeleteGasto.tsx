@@ -1,6 +1,6 @@
 // src/components/ui/Modals/ModalDeleteGasto/ModalDeleteGasto.tsx
 
-import React from 'react';
+import './ModalDeleteGasto.css';
 
 interface ModalConfirmacaoProps {
   isOpen: boolean;
