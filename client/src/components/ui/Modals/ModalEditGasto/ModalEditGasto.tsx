@@ -3,7 +3,7 @@
 import './ModalEditGasto.css';
 import { useState } from 'react';
 import api from '../../../../services/Api';
-import { Gasto } from '../../../../pages/TelaGastos/TelaGastos';
+import { Gasto } from '../../../forms/GastoForm/GastoForm';
 
 interface Props {
   gasto: Gasto;

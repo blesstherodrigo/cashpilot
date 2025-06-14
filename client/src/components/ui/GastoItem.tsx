@@ -1,6 +1,6 @@
 // src/components/ui/GastoItem.tsx
 
-import { Gasto } from '../../pages/TelaGastos/TelaGastos';
+import { Gasto } from '../../components/forms/GastoForm/GastoForm';
 
 interface Props {
   gasto: Gasto;
