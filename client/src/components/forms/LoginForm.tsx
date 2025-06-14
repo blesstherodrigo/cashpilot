@@ -48,8 +48,8 @@ export default function LoginForm() {
           onChange={(e) => setSenha(e.target.value)}
         />
         <button className='EsconderSenha' type="button" onClick={handlePassword}>
-          {isShow && <EyeOff size={18} />}
-          {!isShow && <Eye size={18} />}
+          {isShow && <Eye size={18} />}
+          {!isShow && <EyeOff size={18} />}
         </button>
       </div>
       <br />

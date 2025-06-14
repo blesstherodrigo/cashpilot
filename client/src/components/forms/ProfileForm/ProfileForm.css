@@ -1,0 +1,35 @@
+.botaoEditarPerfil {
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: #327FE4;
+    border: 1px;
+}
+
+.sectionUser{
+    justify-self: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding-left: 2rem;
+}
+
+.PerfilIcon{
+    margin-top: 2rem;
+    justify-self: center;
+    justify-items: center;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 1000px;
+    background-color: #b3b3b3;
+}
+
+.iconePerf {
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+    justify-items: center;
+    font-size: 110px;
+}

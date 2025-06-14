@@ -1,5 +1,8 @@
 .header {
   background-color: hwb(125 51% 11%);
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
+  display: flex;
+  padding-left: 3rem;
 }

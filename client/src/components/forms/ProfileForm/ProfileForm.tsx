@@ -1,6 +1,8 @@
 // src/components/forms/ProfileForm.tsx
+
+import './ProfileForm.css'
 import { useEffect, useState } from 'react';
-import api from '../../services/Api';
+import api from '../../../services/Api';
 
 export default function ProfileForm() {
   const [nome, setNome] = useState('');
@@ -35,8 +37,13 @@ export default function ProfileForm() {
   }, []);
 
   return (
-    <div style={{ maxWidth: 400 }}>
+    <div style={{ maxWidth: 400}}>
       <h2>Perfil do Usuário</h2>
+      
+      <div className='PerfilIcon'>
+        <div className='iconePerf'><i className="bi bi-person-fill"></i></div>
+      </div>
+
 
       <label>Nome</label>
       <input
@@ -46,6 +53,8 @@ export default function ProfileForm() {
         disabled={!editando}
       />
 
+      <br />
+
       <label>Email</label>
       <input
         type="email"
@@ -53,7 +62,7 @@ export default function ProfileForm() {
         onChange={(e) => setEmail(e.target.value)}
         disabled={!editando}
       />
-
+      <br />
       <label>Nascimento</label>
       <input
         type="text"
@@ -70,7 +79,7 @@ export default function ProfileForm() {
             </button>
           </>
         ) : (
-          <button onClick={() => setEditando(true)}>Editar</button>
+          <button className='botaoEditarPerfil' onClick={() => setEditando(true)}>Editar</button>
         )}
       </div>
 

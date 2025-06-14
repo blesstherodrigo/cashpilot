@@ -1,9 +1,11 @@
-import MainLayout from '../components/layout/MainLayout';
-import { useEffect, useState } from 'react';
-import api from '../services/Api';
-import GraficoPorTipo from '../components/graph/GraficoPorTipo';
-import GraficoPorMes from '../components/graph/GraficoPorMes'
+// src/pages/TelaInicio/TelaInicio.tsx
 
+import MainLayout from '../../components/layout/MainLayout';
+import { useEffect, useState } from 'react';
+import api from '../../services/Api';
+import GraficoPorTipo from '../../components/graph/GraficoPorTipo';
+import GraficoPorMes from '../../components/graph/GraficoPorMes';
+import './TelaInicio.css'
 
 export default function TelaInicio() {
   const [porTipo, setPorTipo] = useState<{ tipo: string; total: number }[]>([]);
@@ -29,9 +31,9 @@ export default function TelaInicio() {
 
   return (
     <MainLayout titulo="INÍCIO"> 
-    <div style={{ padding: '2rem' }}>
+    <div className='sectionInicio' >
       <h1>Resumo de Gastos</h1>
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+      <div className='sectionGraphs' >
         <GraficoPorTipo dados={porTipo} />
         <GraficoPorMes dados={porMes} />
       </div>

@@ -1,0 +1,18 @@
+
+.sectionInicio {
+    margin-left: 20px;
+    align-items: center;
+    padding: 2rem;
+}
+
+.sectionGraphs {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+

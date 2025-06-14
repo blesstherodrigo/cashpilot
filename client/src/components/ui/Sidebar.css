@@ -3,6 +3,9 @@
   height: 100%;
   background-color: rgb(180, 180, 180);
   padding-left: 0; 
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 
 ul {
@@ -13,12 +16,19 @@ ul {
 }
 
 .item-menu a {
+  width: 60px;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   text-decoration: none;
-  font-size: 30px;
-  display: flex;
-  margin-bottom: 20px;
-  padding-top: 15px;
-  justify-content: flex-start; 
-  padding-left: 15px; 
+  font-size: 33px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.item-menu a:hover {
+  background-color: #a0a0a0;
+  cursor: pointer;
 }
