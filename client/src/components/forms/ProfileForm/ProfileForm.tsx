@@ -37,53 +37,52 @@ export default function ProfileForm() {
   }, []);
 
   return (
-    <div style={{ maxWidth: 400}}>
-      <h2>Perfil do Usuário</h2>
-      
-      <div className='PerfilIcon'>
-        <div className='iconePerf'><i className="bi bi-person-fill"></i></div>
-      </div>
-
-
-      <label>Nome</label>
-      <input
-        type="text"
-        value={nome}
-        onChange={(e) => setNome(e.target.value)}
-        disabled={!editando}
-      />
-
-      <br />
-
-      <label>Email</label>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        disabled={!editando}
-      />
-      <br />
-      <label>Nascimento</label>
-      <input
-        type="text"
-        value={new Date(nascimento).toLocaleDateString()}
-        disabled
-      />
-
-      <div style={{ marginTop: 12 }}>
-        {editando ? (
-          <>
-            <button onClick={salvar}>Salvar</button>
-            <button onClick={() => setEditando(false)} style={{ marginLeft: 8 }}>
-              Cancelar
-            </button>
-          </>
-        ) : (
-          <button className='botaoEditarPerfil' onClick={() => setEditando(true)}>Editar</button>
-        )}
-      </div>
-
-      {mensagem && <p style={{ marginTop: 10, color: 'green' }}>{mensagem}</p>}
+  <div className="profile-container">
+    <h2>Perfil do Usuário</h2>
+    
+    <div className='PerfilIcon'>
+      <div className='iconePerf'><i className="bi bi-person-fill"></i></div>
     </div>
-  );
+
+    <label>Nome</label>
+    <input
+      type="text"
+      value={nome}
+      onChange={(e) => setNome(e.target.value)}
+      disabled={!editando}
+    />
+
+    <br />
+
+    <label>Email</label>
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      disabled={!editando}
+    />
+    <br />
+    <label>Nascimento</label>
+    <input
+      type="text"
+      value={new Date(nascimento).toLocaleDateString()}
+      disabled
+    />
+
+    <div className="botoes-container">
+      {editando ? (
+        <>
+          <button onClick={salvar}>Salvar</button>
+          <button className="botao-cancelar" onClick={() => setEditando(false)}>
+            Cancelar
+          </button>
+        </>
+      ) : (
+        <button className='botaoEditarPerfil' onClick={() => setEditando(true)}>Editar</button>
+      )}
+    </div>
+
+    {mensagem && <p className="mensagem-feedback">{mensagem}</p>}
+  </div>
+);
 }

@@ -1,0 +1,42 @@
+.tela-suporte-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.mensagens-container {
+  border: 1px solid #ccc;
+  padding: 16px;
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+.mensagem {
+  margin-bottom: 10px;
+}
+
+.mensagem.user {
+  text-align: right;
+  color: #555;
+  font-style: normal;
+}
+
+.mensagem.bot {
+  text-align: left;
+  color: #111;
+  font-style: italic;
+}
+
+.input-pergunta {
+  width: 80%;
+  padding: 8px;
+}
+
+.botao-enviar {
+  padding: 8px;
+  margin-left: 8px;
+}
+
+
+

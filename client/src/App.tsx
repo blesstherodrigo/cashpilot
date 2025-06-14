@@ -1,12 +1,12 @@
 // src/App.tsx
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import TelaLogin from './pages/TelaLogin';
-import TelaRegister from './pages/TelaRegister'; 
+import TelaLogin from './pages/TelaLogin/TelaLogin';
+import TelaRegister from './pages/TelaRegister/TelaRegister'; 
 import TelaInicio from './pages/TelaInicio/TelaInicio';
-import TelaProfile from './pages/TelaProfile';
+import TelaProfile from './pages/TelaProfile/TelaProfile';
 import TelaGastos from './pages/TelaGastos/TelaGastos';
-import TelaSuporte from './pages/TelaSuporte';
+import TelaSuporte from './pages/TelaSuporte/TelaSuporte';
 
 function App() {
   return (

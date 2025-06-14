@@ -33,3 +33,20 @@
     justify-items: center;
     font-size: 110px;
 }
+
+.profile-container {
+  max-width: 400px;
+}
+
+.botoes-container {
+  margin-top: 12px;
+}
+
+.botao-cancelar {
+  margin-left: 8px;
+}
+
+.mensagem-feedback {
+  margin-top: 10px;
+  color: green;
+}

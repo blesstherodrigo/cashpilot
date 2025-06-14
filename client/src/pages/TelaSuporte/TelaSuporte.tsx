@@ -1,6 +1,7 @@
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout';
 import { useState } from 'react';
-import api from '../services/Api';
+import api from '../../services/Api';
+import './TelaSuporte.css'
 
 interface Mensagem {
   texto: string;
@@ -34,20 +35,15 @@ export default function TelaSuporte() {
 
 
   return (
-    <MainLayout titulo="SUPORTE"> 
-      <div style={{ padding: '2rem', maxWidth: 600, margin: 'auto' }}>
+  <MainLayout titulo="SUPORTE">
+    <div className="tela-suporte-container">
       <h1>Suporte (ChatGPT)</h1>
 
-      <div style={{ border: '1px solid #ccc', padding: 16, height: 400, overflowY: 'auto', marginBottom: 16 }}>
+      <div className="mensagens-container">
         {mensagens.map((msg, i) => (
           <div
             key={i}
-            style={{
-              textAlign: msg.remetente === 'user' ? 'right' : 'left',
-              marginBottom: 10,
-              color: msg.remetente === 'user' ? '#555' : '#111',
-              fontStyle: msg.remetente === 'bot' ? 'italic' : 'normal',
-            }}
+            className={`mensagem ${msg.remetente}`}
           >
             <strong>{msg.remetente === 'user' ? 'Você:' : 'Suporte:'}</strong> {msg.texto}
           </div>
@@ -61,15 +57,18 @@ export default function TelaSuporte() {
           value={pergunta}
           onChange={(e) => setPergunta(e.target.value)}
           disabled={carregando}
-          style={{ width: '80%', padding: 8 }}
-        />
-        <button type="submit" disabled={carregando} style={{ padding: 8, marginLeft: 8 }}>
-          {carregando ? 'Enviando...' : 'Enviar'}
-        </button>
-      </form>
-    </div>
+          className="input-pergunta"
+          />
+          <button
+            type="submit"
+            disabled={carregando}
+            className="botao-enviar"
+            >
+            {carregando ? 'Enviando...' : 'Enviar'}
+          </button>
+        </form>
+      </div>
     </MainLayout>
   );
 }
-
 
