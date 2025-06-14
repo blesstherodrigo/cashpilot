@@ -1,7 +1,7 @@
 // src/components/ui/ModalEditGasto.tsx
 import { useState } from 'react';
-import api from '../../services/Api';
-import { Gasto } from '../../pages/TelaGastos/TelaGastos';
+import api from '../../../../services/Api';
+import { Gasto } from '../../../../pages/TelaGastos/TelaGastos';
 
 interface Props {
   gasto: Gasto;

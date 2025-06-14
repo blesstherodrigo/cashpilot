@@ -1,3 +1,5 @@
+// src/components/ui/Modals/ModalDeleteGasto/ModalDeleteGasto.tsx
+
 import React from 'react';
 
 interface ModalConfirmacaoProps {
@@ -6,7 +8,7 @@ interface ModalConfirmacaoProps {
   onConfirmar: () => void;
 }
 
-export default function ModalConfirmacao({ isOpen, onCancelar, onConfirmar }: ModalConfirmacaoProps) {
+export default function ModalDeleteGasto({ isOpen, onCancelar, onConfirmar }: ModalConfirmacaoProps) {
   if (!isOpen) return null;
 
   return (

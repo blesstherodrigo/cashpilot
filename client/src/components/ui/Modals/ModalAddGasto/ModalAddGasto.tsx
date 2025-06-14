@@ -1,6 +1,6 @@
 // src/components/ui/ModalAddGasto.tsx
 import { useState } from 'react';
-import api from '../../services/Api';
+import api from '../../../../services/Api';
 
 interface Props {
   onClose: () => void;

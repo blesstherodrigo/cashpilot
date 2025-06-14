@@ -1,5 +1,5 @@
 import Header from './Header';
-import Sidebar from '../ui/Sidebar';
+import Sidebar from '../ui/SideBar/SideBar';
 import styles from './MainLayout.module.css';
 
 interface Props {

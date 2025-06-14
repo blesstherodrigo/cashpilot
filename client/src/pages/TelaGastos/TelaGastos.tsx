@@ -5,8 +5,8 @@ import './TelaGastos.css';
 import { useEffect, useState } from 'react';
 import api from '../../services/Api';
 import GastoItem from '../../components/ui/GastoItem';
-import ModalAddGasto from '../../components/ui/ModalAddGasto';
-import ModalEditGasto from '../../components/ui/ModalEditGasto';
+import ModalAddGasto from '../../components/ui/Modals/ModalAddGasto/ModalAddGasto';
+import ModalEditGasto from '../../components/ui/Modals/ModalEditGasto/ModalEditGasto';
 
 export interface Gasto {
   id: string;
@@ -70,12 +70,12 @@ export default function TelaGastos() {
           ))
         )}
 
-        {/* Modal de Adição */}
+        {/* Modal de Adicionar */}
         {modalAberto && !gastoEditando && (
           <ModalAddGasto onClose={fecharModal} />
         )}
 
-        {/* Modal de Edição */}
+        {/* Modal de Edidat */}
         {modalAberto && gastoEditando && (
           <ModalEditGasto gasto={gastoEditando} onClose={fecharModal} />
         )}

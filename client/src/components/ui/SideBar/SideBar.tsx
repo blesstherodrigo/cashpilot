@@ -1,7 +1,7 @@
-import './Sidebar.css';
+import './SideBar.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-export default function Sidebar() {
+export default function SideBar() {
   return (
     <nav className="menu-lateral">
       <ul>
