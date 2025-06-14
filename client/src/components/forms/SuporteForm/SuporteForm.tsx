@@ -35,8 +35,6 @@ export default function TelaSuporte() {
 
   return (
     <div className="tela-suporte-container">
-      <h1>Suporte (ChatGPT)</h1>
-
       <div className="mensagens-container">
         {mensagens.map((msg, i) => (
           <div
