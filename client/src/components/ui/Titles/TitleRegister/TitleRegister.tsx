@@ -5,4 +5,3 @@ export default function TitleRegister() {
         <h1 className="titleregister">Cadastro</h1>
     );
 }
-
