@@ -5,7 +5,7 @@ import ModalAddGasto from '../../../components/ui/Modals/ModalAddGasto/ModalAddG
 import ModalEditGasto from '../../../components/ui/Modals/ModalEditGasto/ModalEditGasto';
 import ModalDeleteGasto from '../../../components/ui/Modals/ModalDeleteGasto/ModalDeleteGasto';
 import './GastoForm.css';
-
+import TitleGasto from '../../ui/Titles/TitleGasto/TitleGasto';
 
 export interface Gasto {
   id: string;
@@ -74,7 +74,7 @@ export default function TelaGastos() {
 
   return (
         <div className='sectiongastos'>
-          <h1>Meus Gastos</h1>
+          <TitleGasto/>
           <button onClick={abrirModalNovo}>+ Adicionar Gasto</button>
   
           {gastos.length === 0 ? (
