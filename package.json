@@ -4,5 +4,8 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && node server.js",
     "client": "cd client && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }
