@@ -59,8 +59,12 @@
   margin-top: 10px;
 }
 
+.erro {
+  color: red;
+}
 
-@media(max-width:640px){
+
+@media(max-width:640px) {
 
   .section{
     margin-right: 2rem;
