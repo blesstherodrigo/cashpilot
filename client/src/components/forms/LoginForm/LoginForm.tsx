@@ -2,10 +2,10 @@
 
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
-import { AlignJustify, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { EyeOff } from 'lucide-react';
 import { useState } from 'react';
-import api from '../../services/Api'
+import api from '../../../services/Api'
 
 
 export default function LoginForm() {

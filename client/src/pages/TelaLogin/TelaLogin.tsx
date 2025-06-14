@@ -1,7 +1,7 @@
 // src/pages/TelaLogin.tsx
 
 import Title from '../../components/ui/TitlePilot';
-import LoginForm from '../../components/forms/LoginForm';
+import LoginForm from '../../components/forms/LoginForm/LoginForm';
 
 export default function TelaLogin() {
   return (

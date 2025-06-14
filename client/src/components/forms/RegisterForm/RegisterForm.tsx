@@ -3,7 +3,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './RegisterForm.module.css';
 import { useState } from 'react';
-import api from '../../services/Api';
+import api from '../../../services/Api';
 
 export default function RegisterForm() {
 
