@@ -1,7 +1,7 @@
 // src/components/ModalGasto.tsx
 import { useState } from 'react';
 import api from '../../services/Api';
-import { Gasto } from '../../pages/TelaGastos';
+import { Gasto } from '../../pages/TelaGastos/TelaGastos';
 
 
 interface Props {

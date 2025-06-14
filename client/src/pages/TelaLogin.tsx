@@ -8,7 +8,6 @@ export default function TelaLogin() {
     <div>
       <Title />
       <LoginForm />
-    
     </div>
   );
 }

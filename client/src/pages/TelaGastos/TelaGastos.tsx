@@ -1,10 +1,9 @@
-
-import MainLayout from '../components/layout/MainLayout'; // aparecer header e sidebar
-import '../components/ui/TelaGastos.css';
+import MainLayout from '../../components/layout/MainLayout'; // aparecer header e sidebar
+import './TelaGastos.css';
 import { useEffect, useState } from 'react';
-import api from '../services/Api'
-import GastoItem from '../components/ui/GastoItem'
-import ModalGasto from '../components/ui/ModalGasto'
+import api from '../../services/Api'
+import GastoItem from '../../components/ui/GastoItem'
+import ModalGasto from '../../components/ui/ModalGasto'
 
 export interface Gasto {
   id: string;
