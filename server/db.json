@@ -15,7 +15,7 @@
       "titulo": "Conta de Luz",
       "tipo": "Moradia",
       "data": "2025-01-15",
-      "valor": 133.33,
+      "valor": 133.32,
       "descricao": "conta de luz paga com sucesso"
     },
     "MQ0OvKNq6uXpnWHSMyzbZ": {
@@ -53,24 +53,6 @@
       "data": "2025-08-27",
       "valor": 350.55,
       "descricao": "tenis de presente para o meu pai"
-    },
-    "LfyjjQd6xs6rTLkKI8H4N": {
-      "id": "LfyjjQd6xs6rTLkKI8H4N",
-      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
-      "titulo": "teste",
-      "tipo": "qualquer um",
-      "data": "2025-06-10",
-      "valor": 12.33,
-      "descricao": "teste deste gato"
-    },
-    "W4C7sZvYfB0WYEOFe4-VA": {
-      "id": "W4C7sZvYfB0WYEOFe4-VA",
-      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
-      "titulo": "teste 2",
-      "tipo": "outro tipo",
-      "data": "2025-06-04",
-      "valor": 34,
-      "descricao": "teste 2"
     }
   }
 }
