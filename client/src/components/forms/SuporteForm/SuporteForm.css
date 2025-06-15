@@ -1,7 +1,9 @@
 .tela-suporte-container {
   padding: 2rem;
   max-width: 600px;
-  margin: auto;
+  justify-self: center;
+  margin-left: 55px;
+  width: 600px;
 }
 
 .mensagens-container {
@@ -31,9 +33,28 @@
 .input-pergunta {
   width: 80%;
   padding: 8px;
+  border-radius: 0.3rem;
+  border: solid 1px;
 }
 
 .botao-enviar {
   padding: 8px;
   margin-left: 8px;
+  color: white;
+  background-color: rgb(11, 86, 247);
+  border-radius: 0.3rem;
+  border-color: rgb(11, 86, 247);
+  cursor: pointer;
+}
+
+@media(max-width:692px) {
+  .tela-suporte-container{
+    width: 450px
+  }
+}
+
+@media(max-width:548px) {
+  .tela-suporte-container{
+    width:400px
+  }
 }
