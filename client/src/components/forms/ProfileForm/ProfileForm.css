@@ -1,11 +1,14 @@
-.botaoEditarPerfil {
+.botao-editar-perfil {
     cursor: pointer;
     margin: 1rem;
     padding: 0.5rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    background-color: #327FE4;
-    border: 1px;
+    color: white;
+    background-color: rgb(11, 86, 247);
+    border-radius: 0.3rem;
+    border: solid 1px;
+    border-color: rgb(11, 86, 247);
 }
 
 .sectionUser{
@@ -14,11 +17,13 @@
     border-radius: 1rem;
     border: 1px solid black;
     padding-left: 2rem;
-    margin-left: 55px;
+    margin-left: 1.8rem;
+    margin-top: 3rem;
 }
 
-.PerfilIcon{
+.perfil-icon{
     margin-top: 2rem;
+    margin-bottom: 2rem;
     justify-self: center;
     justify-items: center;
     height: 10rem;
@@ -27,7 +32,7 @@
     background-color: #b3b3b3;
 }
 
-.iconePerf {
+.icon-perf {
     justify-content: center;
     padding: 5px;
     text-align: center;
@@ -43,11 +48,61 @@
   margin-top: 12px;
 }
 
+.botao-salvar {
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: white;
+  background-color: rgb(11, 86, 247);
+  border-radius: 0.3rem;
+  border: solid 1px;
+  border-color: rgb(11, 86, 247);
+}
+
 .botao-cancelar {
-  margin-left: 8px;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: white;
+  background-color: #DD5B5B;
+  border-radius: 0.3rem;
+  border: solid 1px;
+  border-color: #DD5B5B;
 }
 
 .mensagem-feedback {
   margin-top: 10px;
   color: green;
+}
+
+/*Div que contem os inputs*/
+
+.section-inputs-perfil{
+  height: 129px;
+  width: 271.48px;
+  margin: 0px;
+  padding: 0;
+}
+
+/*Inputs Tela de Perfil*/
+.nome-tela-perfil{
+  margin-left: 51px;
+  height: 2rem;
+  margin-bottom: 10px;
+}
+
+.email-tela-perfil{
+  margin-left: 53px;
+  height: 2rem;
+  margin-bottom: 10px;
+}
+
+.data-tela-perfil{
+  margin-left: 10px;
+  height: 2rem;
+  
 }

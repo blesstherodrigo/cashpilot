@@ -6,7 +6,7 @@
     display: flex ;
     gap:1rem;
     flex-wrap: wrap;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 
@@ -15,21 +15,24 @@
     margin-left: 35px;
     height: 48px;
     width: 65px;
-    border-radius: 11px;
+    border-radius: 0.5rem;
     border: none;
-    background-color:  hwb(221 29% 1%);
+    background-color:rgb(11, 86, 247);
     color: white;
     font-size: 20px;
     cursor: pointer;
 }
 
+.btVoltar:hover {
+    background-color: rgb(11, 73, 209);
+}
 
 .Nome {
     margin-top: 1px;
     margin-left: 16px;
     height: 53px;
     width: 350px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     font-size: 21px;
     border:solid #acacac 1px;
 }
@@ -39,7 +42,7 @@
     margin-left: 35px;
     height: 53px;
     width: 350px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     font-size: 21px;
     border:solid #acacac 1px;
 }
@@ -47,7 +50,7 @@
 .Senha {
     height: 53px;
     width: 350px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     font-size: 21px;
     border:solid #acacac 1px;
     margin-right: 3rem;
@@ -68,7 +71,7 @@
     margin-left: 35px;
     height: 54px;
     width: 354px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     font-size: 21px;
     border:solid #acacac 1px;
 }
@@ -77,14 +80,18 @@
     margin-bottom: 30px;
     height: 50px;
     width: 210px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     border: none;
     font-size: 23px;
-    background-color: hwb(221 29% 1%);
+    background-color: rgb(11, 86, 247);
     color: white;
     font-weight: bold;
     cursor: pointer;
     margin-right: 6px;
+}
+
+.btCadastrar:hover {
+    background-color: rgb(11, 73, 209);
 }
 
 .AvisoPreenchimento {

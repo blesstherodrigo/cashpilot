@@ -2,36 +2,18 @@
   "usuarios": {
     "j_BD2tEzXVBseO4Vb0krj": {
       "id": "j_BD2tEzXVBseO4Vb0krj",
-      "nome": "maria",
+      "nome": "Maria",
       "nascimento": "1990-02-07",
-      "email": "maria@email.com",
+      "email": "maria.lurdes@email.com",
       "senha": "$2b$10$/6i57Xlv4oZHIyoTPdjYx./UBcM848fyq1Fv25Z1OkJCZPSlHmmVm"
     }
   },
   "gastos": {
-    "0X1xZUTAZC6wUhL8RdjMR": {
-      "id": "0X1xZUTAZC6wUhL8RdjMR",
-      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
-      "titulo": "Tenis",
-      "tipo": "Vestimenta",
-      "data": "2025-08-27",
-      "valor": 100,
-      "descricao": "tenis de presente para o meu pai"
-    },
-    "Rqt7gZBclq-DkX1Ht56p1": {
-      "id": "Rqt7gZBclq-DkX1Ht56p1",
-      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
-      "titulo": "Lanche",
-      "tipo": "Alimentação",
-      "data": "2025-06-03",
-      "valor": 12.5,
-      "descricao": "lanche da tarde com os amigos"
-    },
     "wNiBKpwcGWAMSW1_o2kd4": {
       "id": "wNiBKpwcGWAMSW1_o2kd4",
       "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
       "titulo": "Espelho",
-      "tipo": "Moradia",
+      "tipo": "Outros",
       "data": "2025-12-05",
       "valor": 55.55,
       "descricao": "espelho novo do banheiro"
@@ -42,8 +24,35 @@
       "titulo": "Carregador",
       "tipo": "Outros",
       "data": "2025-09-10",
-      "valor": 120,
+      "valor": 120.55,
       "descricao": "carregador novo"
+    },
+    "ftgB7PudWnuwMv3liYpS-": {
+      "id": "ftgB7PudWnuwMv3liYpS-",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Pão de Batata",
+      "tipo": "Alimentação",
+      "data": "2025-06-17",
+      "valor": 10.9,
+      "descricao": "Pão de bataaaata"
+    },
+    "eaU8afBuWK6dExSVEjcV7": {
+      "id": "eaU8afBuWK6dExSVEjcV7",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Tênis",
+      "tipo": "Vestimenta",
+      "data": "2025-01-25",
+      "valor": 100,
+      "descricao": "presente para meu pai"
+    },
+    "W5QFaZNd8SVMQJjrlcUHq": {
+      "id": "W5QFaZNd8SVMQJjrlcUHq",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "teste",
+      "tipo": "Transporte",
+      "data": "2025-06-05",
+      "valor": 12.22,
+      "descricao": "ahahhaha"
     }
   }
 }

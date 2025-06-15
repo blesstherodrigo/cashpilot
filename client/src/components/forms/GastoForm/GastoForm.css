@@ -1,12 +1,12 @@
 .sectiongastos {
-  margin-left: 55px;
+  margin-left: 51px;
   padding: 2rem;
 }
 
 .gastoItem {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 20px 30px;
   border-radius: 10px;
   margin-bottom: 15px;
   margin-top: 20px;
@@ -14,10 +14,68 @@
   border: solid 1px;
 }
 
-.gastoButtons button {
+
+.editarGasto {
   margin-left: 10px;
-  background: none;
-  border: none;
+  margin-bottom: 0.1rem;
+  padding: 0.3rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  color: white;
+  background-color: rgb(11, 86, 247);
+  border: solid 1px;
+  border-color: rgb(11, 86, 247);
+  border-radius: 0.3rem;
   cursor: pointer;
   font-size: 18px;
+}
+
+.editarGasto:hover {
+  background-color: rgb(11, 73, 209);
+}
+
+.excluirGasto {
+  margin-left: 10px;
+  margin-top: 0.1rem;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: white;
+  background-color: #DD5B5B;
+  border: solid 1px;
+  border-color: #DD5B5B;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.excluirGasto:hover {
+  background-color: #ce4545;
+}
+
+.add-gasto {
+  margin-right: 1.2rem;
+  margin-top:1rem;
+  height: 4rem;
+  width: 10rem;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #60dc59;
+  border: solid 1px;
+  border-color: #60dc59;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.add-gasto:hover {
+  background-color: #3fbb38;
+}
+
+.nenhum-gasto {
+  margin-top: 1rem;
+  margin-right: 0.9rem;
 }

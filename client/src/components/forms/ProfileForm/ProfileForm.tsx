@@ -40,45 +40,49 @@ export default function ProfileForm() {
   <div className="profile-container">
     <h2>Perfil do Usuário</h2>
     
-    <div className='PerfilIcon'>
-      <div className='iconePerf'><i className="bi bi-person-fill"></i></div>
+    <div className='perfil-icon'>
+      <div className='icon-perf'><i className="bi bi-person-fill"></i></div>
     </div>
 
-    <label>Nome</label>
-    <input
-      type="text"
-      value={nome}
-      onChange={(e) => setNome(e.target.value)}
-      disabled={!editando}
-    />
+    <div className='section-inputs-perfil' >
+      <label>Nome</label>
+      <input
+        className='nome-tela-perfil'
+        type="text"
+        value={nome}
+        onChange={(e) => setNome(e.target.value)}
+        disabled={!editando}
+      />
 
     <br />
 
-    <label>Email</label>
-    <input
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      disabled={!editando}
-    />
-    <br />
-    <label>Nascimento</label>
-    <input
-      type="text"
-      value={new Date(nascimento).toLocaleDateString()}
-      disabled
-    />
-
+      <label>Email</label>
+      <input
+        className='email-tela-perfil'
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        disabled={!editando}
+      />
+      <br />
+      <label>Nascimento</label>
+      <input
+        className='data-tela-perfil'
+        type="text"
+        value={new Date(nascimento).toLocaleDateString()}
+        disabled
+      />
+    </div>
     <div className="botoes-container">
       {editando ? (
         <>
-          <button onClick={salvar}>Salvar</button>
+          <button className="botao-salvar" onClick={salvar}>Salvar</button>
           <button className="botao-cancelar" onClick={() => setEditando(false)}>
             Cancelar
           </button>
         </>
       ) : (
-        <button className='botaoEditarPerfil' onClick={() => setEditando(true)}>Editar</button>
+        <button className='botao-editar-perfil' onClick={() => setEditando(true)}>Editar</button>
       )}
     </div>
 

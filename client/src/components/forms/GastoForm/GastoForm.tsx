@@ -1,3 +1,5 @@
+// src/components/forms/GastoForm/GastoForm.tsx
+
 import { useEffect, useState } from 'react';
 import api from '../../../services/Api';
 import GastoItem from '../../../components/ui/GastoItem';
@@ -75,17 +77,17 @@ export default function TelaGastos() {
   return (
         <div className='sectiongastos'>
           <TitleGasto/>
-          <button onClick={abrirModalNovo}>+ Adicionar Gasto</button>
+          <button className='add-gasto' onClick={abrirModalNovo}>Adicionar</button>
   
           {gastos.length === 0 ? (
-            <p>Nenhum gasto encontrado.</p>
+            <p className='nenhum-gasto'>Nenhum gasto encontrado.</p>
           ) : (
             gastos.map((gasto) => (
               <GastoItem
                 key={gasto.id}
                 gasto={gasto}
                 onEditar={abrirModalEditar}
-                onExcluir={abrirModalExcluir} // ← novo
+                onExcluir={abrirModalExcluir}
               />
             ))
           )}

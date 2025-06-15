@@ -1,3 +1,13 @@
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
 .modalAddGastos {
   height: 39rem;
   width: 50vw;
@@ -16,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .inputs {
@@ -27,6 +38,8 @@
 }
 
 .Nome, .Tipo, .Preco, .Data {
+  margin-bottom: 10px;
+  margin-left: 2vw;
   height: 55px;
   width: 18vw;
   border-radius: 10px;
@@ -36,11 +49,12 @@
 }
 
 .Descricao {
+  margin-top: 20px;
   height: 150px;
   width: 42.5vw;
   border-radius: 10px;
   font-size: 21px;
-  border: solid #acacac 1px;
+  border:solid #acacac 1px;
   background-color: hwb(0 91% 9%);
 }
 
@@ -56,10 +70,11 @@
   border-radius: 10px;
 }
 
+
 .BtAdicionar {
   height: 3.9rem;
   width: 10rem;
-  background-color: hsl(224, 100%, 51%);
+  background-color: rgb(11, 86, 247);
   color: white;
   cursor: pointer;
   border: none;
@@ -69,34 +84,76 @@
   border-radius: 10px;
 }
 
-.background {
-  position: fixed;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
+.BtAdicionar:hover {
+  background-color: rgb(11, 73, 209);
+}
+
+@media(max-width:1629px){
+  .BtAdicionar{
+    margin-left: 18rem;
+  }
+}
+
+@media(max-width:1618px){
+  .BtAdicionar{
+    margin-left: 13rem !important;
+  }
+}
+
+
+
+@media(max-width:1359px){
+  .BtAdicionar{
+    margin-left: 10rem !important;
+  }
 }
 
 @media (max-width: 1100px) {
+
+  .inputs{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  column-gap: 30px !important;
+  row-gap: 15px !important; 
+  margin: 40px 35px 20px 35px;
+  }
+  
   .modalAddGastos {
     height: 45rem;
   }
 
   .inputs {
-    grid-template-columns: 1fr;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
   }
 
   .Nome, .Tipo, .Preco, .Data {
+    margin-top: 1px;
+    margin-left: 2vw;
+    height: 50px;
     width: 38vw;
+    border-radius: 10px;
     font-size: 19px;
+    border:solid #acacac 1px;
+    background-color: hwb(0 91% 9%);
   }
 
   .Descricao {
+    margin-top: 1px;
     width: 38vw;
   }
 
+  .BtCancelar{
+    margin-top: 45px !important;
+    width: 9vw;
+    font-size: 20px;
+  }
+
   .BtAdicionar {
-    margin-left: 10rem;
+    margin-top: 45px !important;
+    margin-left: 90px !important;
+    width: 9vw;
+    font-size: 20px;
   }
 }
 
@@ -106,19 +163,32 @@
   }
 
   .Nome, .Tipo, .Preco, .Data {
+    margin-top: 1px;
+    margin-left: 2vw;
+    height: 48px;
     width: 15rem;
+    border-radius: 10px;
     font-size: 17px;
+    border:solid #acacac 1px;
+    background-color: hwb(0 91% 9%);
   }
 
   .Descricao {
-    width: 15rem;
-    font-size: 17px;
+    width: 17rem;
+    font-size: 15px;
   }
 
-  .BtAdicionar, .BtCancelar {
-    width: 5rem;
+  .BtAdicionar {
+    margin-left: 0;
+    margin-right: 1rem;
     font-size: 17px;
+    width: 5rem;
+  }
+  .BtCancelar {
+    font-size: 17px;
+    width: 5rem;
     margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .headerModAddGasto {

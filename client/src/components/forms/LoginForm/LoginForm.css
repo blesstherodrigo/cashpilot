@@ -4,7 +4,7 @@
   background-color: hwb(125 51% 11%);
   justify-self: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
 } 
@@ -46,6 +46,10 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+.entrar:hover {
+  background-color: rgb(11, 73, 209);
 }
 
 .txtCad {

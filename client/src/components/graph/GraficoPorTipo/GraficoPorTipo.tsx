@@ -5,7 +5,7 @@ import {
   Chart as ChartJS, ArcElement, Tooltip, Legend
 } from 'chart.js';
 import './GraficoPorTipo.css'
-import { TIPOS_DE_GASTO } from '../../../utils/TiposGasto';
+import { TIPOS_DE_GASTO } from '../../../Types/TiposGasto'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 

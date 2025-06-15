@@ -12,12 +12,12 @@ export default function GastoItem({ gasto, onEditar, onExcluir }: Props) {
   return (
     <div className="gastoItem">
       <div>
-        <strong>{gasto.titulo}</strong> — R$ {gasto.valor.toFixed(2)}<br />
+        <strong>{gasto.titulo}</strong> <br/>R$ {gasto.valor.toFixed(2)}<br/>
         {gasto.tipo} | {new Date(gasto.data).toLocaleDateString()}
       </div>
       <div className="gastoButtons">
-        <button onClick={() => onEditar(gasto)}>Editar</button>
-        <button onClick={() => onExcluir(gasto)}>Excluir</button>
+        <button className='editarGasto' onClick={() => onEditar(gasto)}><i className="bi bi-pencil-fill"></i></button>
+        <button className='excluirGasto' onClick={() => onExcluir(gasto)}><i className="bi bi-trash3-fill"></i></button>
       </div>
     </div>
   );
