@@ -50,8 +50,10 @@ O projeto foi desenvolvido por estudantes da Universidade São Judas Tadeu como 
 - cd CashPilot
 
 # Instale as dependências
-- npm install primeiro na raiz do projeto cashpilot/
-- depois nas seguintes pastas /server/ e /client/, pois cada uma contém suas próprias dependências separadas
+- npm install na raiz do projeto cashpilot/
+- npm install na pasta /server/ onde fica o Back-end
+- npm install na pasta /client/ onde fica o Front-end
+- Cada uma contém suas próprias dependências separadas
 
 # Inicie o projeto
 - npm start (usamos a biblioteca concurrently para rodar o front-end e back-end apenas com um comando)
