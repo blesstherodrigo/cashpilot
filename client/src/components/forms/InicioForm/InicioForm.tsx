@@ -1,8 +1,8 @@
 import './InicioForm.css'
 import { useEffect, useState } from 'react';
 import api from '../../../services/Api';
-import GraficoPorTipo from '../../../components/graph/GraficoPorTipo';
-import GraficoPorMes from '../../../components/graph/GraficoPorMes';
+import GraficoPorTipo from '../../../components/graph/GraficoPorTipo/GraficoPorTipo';
+import GraficoPorMes from '../../graph/GraficoPorMes/GraficoPorMes';
 import TitleInicio from '../../ui/Titles/TitleInicio/TitleInicio';
 
 export default function TelaInicio() {

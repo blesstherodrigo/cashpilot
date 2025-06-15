@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import styles from './RegisterForm.module.css';
 import { useState } from 'react';
 import api from '../../../services/Api';
+import { Eye } from 'lucide-react';
+import { EyeOff } from 'lucide-react';
 
 export default function RegisterForm() {
 
   const navigate = useNavigate ();
-
+  const [isShow, setIsShow] = useState(false);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -37,6 +39,8 @@ export default function RegisterForm() {
     }
   };
 
+  const handlePassword =() => setIsShow(!isShow);
+
   return (
     <>
       <section className={styles.section}>
@@ -58,13 +62,19 @@ export default function RegisterForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input
-            type="password"
-            className={styles.Senha}
-            placeholder="Digite sua senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-          />
+          <div className='SectSenhaRegister'>
+            <input
+              type={isShow ? "text" : "password"}
+              className={styles.Senha}
+              placeholder="Digite sua senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+            <button className={styles.EsconderSenhaRegister} type='button' onClick={handlePassword}>
+              {isShow && <Eye size={18} />}
+              {!isShow && <EyeOff size={18} />}
+            </button>
+          </div>
           <input
             type="date"
             className={styles.DtNascimento}
@@ -77,7 +87,7 @@ export default function RegisterForm() {
           <button className={styles.btCadastrar} onClick={handleCadastro}>CADASTRAR</button>
         </div>
 
-        {erro && <p style={{ color: 'red', marginTop: '1rem' }}>{erro}</p>}
+        {erro && <p className={styles.AvisoPreenchimento}>{erro}</p>}
       </section>
     </>
   );

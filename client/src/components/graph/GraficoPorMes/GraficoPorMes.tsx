@@ -4,6 +4,8 @@ import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend
 } from 'chart.js';
+import './GraficoPorMes.css'
+
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -16,13 +18,13 @@ export default function GraficoPorMes({ dados }: Props) {
   const valores = dados.map(item => item.total);
 
   return (
-    <div style={{ maxWidth: 600 }}>
+    <div className='sectiongraphmes'>
       <h3>Gastos por Mês</h3>
       <Bar
         data={{
           labels,
           datasets: [{
-            label: 'Total em R$',
+            label: 'Total: R$',
             data: valores,
             backgroundColor: '#3498db',
           }],

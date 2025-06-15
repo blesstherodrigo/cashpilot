@@ -9,23 +9,41 @@
     }
   },
   "gastos": {
-    "DR5Cjinft9pqAGLFJ-Dua": {
-      "id": "DR5Cjinft9pqAGLFJ-Dua",
-      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
-      "titulo": "Janta",
-      "tipo": "Alimentação",
-      "data": "2025-08-19",
-      "valor": 99.99,
-      "descricao": "janta de hoje a noite"
-    },
     "0X1xZUTAZC6wUhL8RdjMR": {
       "id": "0X1xZUTAZC6wUhL8RdjMR",
       "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
       "titulo": "Tenis",
-      "tipo": "Outros",
+      "tipo": "Vestimenta",
       "data": "2025-08-27",
-      "valor": 350.55,
+      "valor": 100,
       "descricao": "tenis de presente para o meu pai"
+    },
+    "Rqt7gZBclq-DkX1Ht56p1": {
+      "id": "Rqt7gZBclq-DkX1Ht56p1",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Lanche",
+      "tipo": "Alimentação",
+      "data": "2025-06-03",
+      "valor": 12.5,
+      "descricao": "lanche da tarde com os amigos"
+    },
+    "wNiBKpwcGWAMSW1_o2kd4": {
+      "id": "wNiBKpwcGWAMSW1_o2kd4",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Espelho",
+      "tipo": "Moradia",
+      "data": "2025-12-05",
+      "valor": 55.55,
+      "descricao": "espelho novo do banheiro"
+    },
+    "3d0342lfhp5XxU4CzvDPt": {
+      "id": "3d0342lfhp5XxU4CzvDPt",
+      "usuarioId": "j_BD2tEzXVBseO4Vb0krj",
+      "titulo": "Carregador",
+      "tipo": "Outros",
+      "data": "2025-09-10",
+      "valor": 120,
+      "descricao": "carregador novo"
     }
   }
 }

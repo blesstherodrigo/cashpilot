@@ -4,6 +4,7 @@ import './ModalEditGasto.css';
 import { useState } from 'react';
 import api from '../../../../services/Api';
 import { Gasto } from '../../../forms/GastoForm/GastoForm';
+import { TIPOS_DE_GASTO } from '../../../../utils/TiposGasto';
 
 interface Props {
   gasto: Gasto;
@@ -33,7 +34,13 @@ export default function ModalEditGasto({ gasto, onClose }: Props) {
         <div className="headerModAddGasto">Editar Gasto</div>
         <div className="inputs">
           <input type="text" placeholder="Título" value={titulo} onChange={e => setTitulo(e.target.value)} />
-          <input type="text" placeholder="Tipo" value={tipo} onChange={e => setTipo(e.target.value)} />
+          <select value={tipo} onChange={e => setTipo(e.target.value)}>
+            {TIPOS_DE_GASTO.map((tipoItem) => (
+              <option key={tipoItem.label} value={tipoItem.label}>
+                {tipoItem.label}
+              </option>
+            ))}
+          </select>
           <input type="number" placeholder="Valor (R$)" value={valor} onChange={e => setValor(Number(e.target.value))} />
           <input type="date" value={data} onChange={e => setData(e.target.value)} />
         </div>

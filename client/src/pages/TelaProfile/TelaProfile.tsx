@@ -1,4 +1,4 @@
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout/MainLayout';
 import ProfileForm from '../../components/forms/ProfileForm/ProfileForm';
 
 export default function TelaProfile() {

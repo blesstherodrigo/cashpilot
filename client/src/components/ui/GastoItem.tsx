@@ -17,7 +17,7 @@ export default function GastoItem({ gasto, onEditar, onExcluir }: Props) {
       </div>
       <div className="gastoButtons">
         <button onClick={() => onEditar(gasto)}>Editar</button>
-        <button onClick={() => onExcluir(gasto)}>Excluir</button> {/* ✅ aqui */}
+        <button onClick={() => onExcluir(gasto)}>Excluir</button>
       </div>
     </div>
   );

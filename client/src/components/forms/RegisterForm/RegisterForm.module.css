@@ -1,4 +1,4 @@
-.section{
+.section {
     height: 500px;
     width: 900px;
     background-color: hwb(125 51% 11%);
@@ -10,7 +10,7 @@
 }
 
 
-.btVoltar{
+.btVoltar {
     margin-top: 35px;
     margin-left: 35px;
     height: 48px;
@@ -24,8 +24,9 @@
 }
 
 
-.Nome{
+.Nome {
     margin-top: 1px;
+    margin-left: 15px;
     height: 53px;
     width: 350px;
     border-radius: 10px;
@@ -33,7 +34,7 @@
     border:solid #acacac 1px;
 }
 
-.Email{
+.Email {
     margin-top: 1px;
     margin-left: 35px;
     height: 53px;
@@ -43,15 +44,27 @@
     border:solid #acacac 1px;
 }
 
-.Senha{
+.Senha {
     height: 53px;
     width: 350px;
     border-radius: 10px;
     font-size: 21px;
     border:solid #acacac 1px;
+    margin-right: 3rem;
 }
 
-.DtNascimento{
+
+
+.EsconderSenhaRegister {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 0;   
+    color: rgb(0, 0, 0);
+    margin-left: -84px;
+}
+
+.DtNascimento {
     margin-left: 35px;
     height: 54px;
     width: 354px;
@@ -60,15 +73,7 @@
     border:solid #acacac 1px;
 }
 
-.CPF{
-    height: 53px;
-    width: 350px;
-    border-radius: 10px;
-    font-size: 21px;
-    border:solid #acacac 1px;
-}
-
-.btCadastrar{
+.btCadastrar {
     margin-bottom: 30px;
     height: 50px;
     width: 210px;
@@ -82,84 +87,105 @@
     margin-right: 6px;
 }
 
-@media(max-width:950px){
-    .section{
+.AvisoPreenchimento {
+    color: red;
+    justify-self: center;
+    margin-top: 1rem;
+    margin-left: 21rem;
+    text-align: center;
+    justify-content: center;
+}
+
+@media(max-width:950px) {
+    .section {
         height: 25rem;
         width: 45rem;
     }
 
-    div .formulario{
+    div .formulario {
         margin-top: 10px
     }
 
-    .Nome, .Email, .Senha, .DtNascimento, .CPF{
+    .Nome, .Email, .Senha, .DtNascimento, .CPF {
         height: 2.6rem;
         width: 17rem;
         font-size: 18px;
     }
 
-    button .btVoltar, .btCadastrar{
+    button .btVoltar, .btCadastrar {
         height: 2.6rem;
     }
 
-    .btCadastrar{
+    .btCadastrar {
         font-size: 18px;
+    }
+
+    .AvisoPreenchimento {
+        margin-left: 15rem;
     }
 }
 
-@media(max-width:760px){
-    .section{
+@media(max-width:760px) {
+    .section {
         height: 37rem;
         width: 30rem;
     }
     
     .formulario {
-    display: grid !important;
-    grid-template-columns: 1fr !important;  /* Apenas uma coluna */
-    row-gap: 20px; /* Espaçamento entre os inputs */
-    column-gap: 0; /* Sem espaçamento lateral entre colunas */
-    margin: 20px 20px;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        row-gap: 20px;
+        column-gap: 0;
+        margin: 20px 20px;
     }
 
-    .btVoltar{
+    .btVoltar {
         height: 2rem;
         font-size: 18px;
     }
 
-    .Nome{
+    .Nome {
         margin-top: 61px;
     }
 
     .Nome, .Email, .Senha, .DtNascimento, .CPF {
-    width: 100% !important; /* Ocupa toda a largura da coluna */
-    margin-left: 0;
-    font-size: 16px;
+        width: 100% !important;
+        margin-left: 0;
+        font-size: 16px;
     }
 
     .linhaFinal {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .AvisoPreenchimento {
+        margin-left: 7rem;
     }
 }
 
-@media(max-width:545px){
-    .section{
+@media(max-width:545px) {
+    .section {
         width: 22rem;
     }
 
-    .Nome{
+    .Nome {
         margin-top: 3px;
     }
 
-    .btCadastrar{
+    .btCadastrar {
         height: 2.4rem !important; 
         width: 10rem;
         font-size: 17px !important;
     }
+
+    .AvisoPreenchimento {
+        margin-left: 3rem;
+    }
 }
 
-body{
+body {
     text-align: center;
     margin: 0;
 }
@@ -180,6 +206,3 @@ body{
     padding: 0 35px;
     margin-top: auto;
 }
-
-
-

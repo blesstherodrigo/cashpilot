@@ -23,15 +23,16 @@
 
 .Senha {
   margin-top: 20px;
+  margin-right: 10px;
 }
 
-.EsconderSenha{
+.EsconderSenha {
   background-color: transparent;
   border: 0;
   cursor: pointer;
   outline: 0;
   color: rgb(0, 0, 0);
-  margin-left: -34px;
+  margin-left: -38px;
 }
 
 .entrar {
@@ -47,7 +48,7 @@
   cursor: pointer;
 }
 
-.txtCad{
+.txtCad {
   text-align: center;
   align-items: flex-end;
   
@@ -66,20 +67,20 @@
 
 @media(max-width:640px) {
 
-  .section{
+  .section {
     margin-right: 2rem;
     margin-left: 2rem;
     height: 15rem;
     width: 23rem;
   }
-  .Email{
+  .Email {
     height: 2.5rem;
     margin-top: 20px;
     width: 14rem;
     border-radius: 6px;
     font-size: 18px;
   }
-  .Senha{
+  .Senha {
     height: 2.5rem;
     margin-top: 1px;
     width: 14rem;
@@ -87,7 +88,7 @@
     font-size: 18px;
   }
 
-  .entrar{
+  .entrar {
     margin-top: 10px;
     height: 2.5rem;
     width: 8rem;
@@ -95,7 +96,7 @@
     border-radius: 6px;
   }
 
-  .title{
+  .title {
     font-size: 60px;
   }
 }

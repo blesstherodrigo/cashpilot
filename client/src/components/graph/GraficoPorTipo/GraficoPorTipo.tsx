@@ -1,9 +1,11 @@
-// src/components/graph/GraficoPorTipo.tsx
+// src/components/graph//GraficoPorTipo.tsx
 
 import { Pie } from 'react-chartjs-2';
 import {
   Chart as ChartJS, ArcElement, Tooltip, Legend
 } from 'chart.js';
+import './GraficoPorTipo.css'
+import { TIPOS_DE_GASTO } from '../../../utils/TiposGasto';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -14,15 +16,16 @@ interface Props {
 export default function GraficoPorTipo({ dados }: Props) {
   const labels = dados.map(item => item.tipo);
   const valores = dados.map(item => item.total);
-  const cores = ['#3498db', '#e74c3c', '#2ecc71', '#9b59b6', '#f39c12'];
+  const cores = TIPOS_DE_GASTO.map(item => item.cor);;
 
   return (
-    <div style={{ maxWidth: 500 }}>
+    <div className='sectiongraphtipo'>
       <h3>Gastos por Tipo</h3>
       <Pie
         data={{
           labels,
           datasets: [{
+            label: 'Total: R$',
             data: valores,
             backgroundColor: cores,
           }],

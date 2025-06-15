@@ -1,4 +1,4 @@
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout/MainLayout';
 import SuporteForm from '../../components/forms/SuporteForm/SuporteForm';
 import TitleSuporte from '../../components/ui/Titles/TitleSuporte/TitleSuporte'
 

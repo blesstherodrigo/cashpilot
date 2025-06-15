@@ -1,6 +1,6 @@
 // src/pages/TelaInicio/TelaInicio.tsx
 
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout/MainLayout';
 import InicioForm from '../../components/forms/InicioForm/InicioForm';
 
 export default function TelaInicio() {
