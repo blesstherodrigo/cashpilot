@@ -47,6 +47,29 @@
   cursor: pointer;
 }
 
+.txtContatos{
+  margin-top: 9rem;
+  margin-bottom: 3rem;
+}
+
+.bi-telephone-fill{
+  margin-right: 15px;
+}
+
+.ctTelefone{
+  margin-right: 29px;
+  font-size: 16px;
+}
+
+.bi-envelope-fill{
+  margin-right: 14px;
+}
+.ctEmail{
+  margin-top: 9px;
+  margin-left: 9px;
+  font-size: 16px;
+}
+
 @media(max-width:692px) {
   .tela-suporte-container{
     width: 450px

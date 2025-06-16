@@ -62,8 +62,16 @@ export default function TelaSuporte() {
             >
             {carregando ? 'Enviando...' : 'Enviar'}
           </button>
-        </form>
+      </form>
+        
+        <br />
+      <div className='Contato'>
+        <h4 className='txtContatos'>Ou entre em contato conosco através dos canais abaixo:</h4>
+        <p className='ctTelefone'><i className="bi bi-telephone-fill"></i>(11) 12345-6789</p>
+        <p className='ctEmail'><i className="bi bi-envelope-fill"></i>cashpilot@email.com</p>
       </div>
+      </div>
+
   );
 }
 
