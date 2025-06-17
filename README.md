@@ -13,7 +13,7 @@
 
 > **Gerencie melhor. Viva melhor.**
 
-CashPilot é um site para **gerenciamento pessoal de gastos**, desenvolvido com o objetivo de ajudar jovens e adultos a organizarem seus gastos de forma prática, inteligente e visual. Com uma interface simples, intuitiva e responsiva, o sistema permite o registro de despesas e visualização de gráficos — promovendo a educação financeira e o uso consciente do dinheiro.
+CashPilot é um site para **gerenciamento pessoal de gastos**, desenvolvido com o objetivo de ajudar jovens e adultos a organizarem seus gastos de forma prática, inteligente e visual. Com uma interface simples, intuitiva e responsiva, o sistema permite o registro de despesas e visualização de gráficos — promovendo o uso consciente do dinheiro.
 
 ---
 
